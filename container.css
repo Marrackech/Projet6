@@ -1,0 +1,71 @@
+.containerModals {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.containerModals h3 {
+  font-size: larger;
+}
+.containerModals .modalWork {
+  background-color: white;
+  width: 50%;
+  height: 53%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.containerModals .modalWork .fa-xmark {
+  position: absolute;
+  top: 26%;
+  right: 30%;
+  cursor: pointer;
+  font-size: x-large;
+}
+.containerModals .modalWork button {
+  width: 200px;
+  background-color: rgb(29, 97, 84);
+  opacity: 0.8;
+  padding: 5px 10px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.containerModals .modalWork button:hover {
+  opacity: 1;
+  color: white;
+}
+
+.Workmodal {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 3px;
+  grid-row-gap: 5px;
+  border-bottom: 1px solid rgb(179, 179, 179);
+  padding-bottom: 20px;
+}
+.Workmodal figure {
+  width: 50%;
+  margin-bottom: 2px;
+  position: relative;
+}
+.Workmodal img {
+  width: 5em;
+}
+.Workmodal i {
+  background-color: black;
+  border-radius: 3px;
+  padding: 3px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  left: 45px;
+  top: 5px;
+  font-size: small;
+}/*# sourceMappingURL=container.css.map */
