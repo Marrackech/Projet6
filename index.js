@@ -30,7 +30,7 @@ async function  getWorks(){
             let figcaption = document.createElement("FIGCAPTION");
             
             let catid = Result[i]["categoryId"];
-            figcaption.innerText = Result[i]["title"] + "id = " + catid;
+            figcaption.innerText = Result[i]["title"];
             figure.appendChild(figcaption);
             gallerie.appendChild(figure);
         }

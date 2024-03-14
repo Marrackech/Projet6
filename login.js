@@ -8,46 +8,46 @@ const error = document.querySelector("#error-message")
 //recuperer les users
 
 
-async function getUsers() {
+async function getUsers(userEmail,userPwd) {
     
-    const response = await fetch("http://localhost:5678/api-docs/post_users_login", {
-        method: 'POST',
+    const response = await fetch("http://localhost:5678/api/users/login", {
+        method: 'POST', 
     headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'accept' : 'application/json'
     },
     body: JSON.stringify({
-        utilisateur: 'nom_utilisateur',
-        motdepasse: '123456'
+        email: userEmail,
+        password: userPwd
     })
     }
     )
-    return response;
+   
+    if (!response.ok) {
+        throw new Error ('failed to login');
+    }
+    const data = await response.json();
+    return data;
+
    
   
 
 } 
-getUsers()
-//  console.log(getUsers());
+
+
 
 //fonction de connexion
 
-async function login() {
-const users = await getUsers();
-console.log(users)
 form.addEventListener("submit", (e) => {
-    e.preventDefault(); //blocker le renvoie
-    const userEmail = email.value;
+    e.preventDefault(); //bloquer le renvoie
     const userPwd = password.value;
+    const userEmail = email.value;
     console.log(userEmail,userPwd)
-
+    const users = getUsers();
     console.log(users)
-
+    console.log(users)
 })
-
-}
-login()
-
-//bon
+//form
 
 
 function checkUsers(user){

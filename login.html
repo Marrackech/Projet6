@@ -27,7 +27,7 @@
     <section id="contact">
 		<h2>Log In</h2>
         <p id="error-message" style="display: none; color:red;">“Erreur dans l’identifiant ou le mot de passe”</p>
-		<form action="submit" method="get">
+		<form action="http://localhost:5678/api/users/login" method="post">
 			
 			<label for="email">Email</label>
 			<input type="email" name="email" id="email">
@@ -36,7 +36,7 @@
 			<input type="submit" value="Envoyer">
             <a href="">Mot de passe oublié </a>
 		</form>
-        <script src="backend/login.js" defenfer>
+        <script src="login.js" defenfer>
 
         </script>
 	</section>
